@@ -1,0 +1,21 @@
+plugins {
+    // Loom 1.15 is required for unobfuscated Minecraft 26.1+
+    id 'net.fabricmc.fabric-loom' version '1.15' 
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    // Mappings are handled differently in 26.1.2, but Loom 1.15 automates this
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
+// JVM 25 is required for Minecraft 26.1+ 
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 25
+}
