@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "essential_util",
+  "version": "1.0.0",
+  "name": "Essential Util by Krontix",
+  "description": "500+ FPS, Inventory Tweaks, and Potato PC fixes.",
+  "contact": { "sources": "https://github.com/krontix/essentialutil" },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [ "com.krontix.util.EssentialUtil" ],
+    "client": [ "com.krontix.util.EssentialUtilClient" ]
+  },
+  "mixins": [ "essential_util.mixins.json" ]
+}
