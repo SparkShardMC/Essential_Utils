@@ -1,0 +1,10 @@
+accessWidener v2
+
+# Allows Krontix to add the "Tutorials" button to the ESC Menu
+accessible class net/minecraft/client/gui/screen/GameMenuScreen
+
+# Allows Krontix to draw the trash icon and handle clicks in the Inventory
+accessible class net/minecraft/client/gui/screen/ingame/InventoryScreen
+
+# Makes the internal render methods public so we can optimize fog/particles
+accessible method net/minecraft/client/render/BackgroundRenderer renderFog(Lnet/minecraft/client/render/Camera;Lnet/minecraft/client/render/BackgroundRenderer$FogType;FZF)V
