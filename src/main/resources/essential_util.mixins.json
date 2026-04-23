@@ -1,0 +1,11 @@
+{
+  "package": "com.krontix.util.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "GameMenuScreenMixin",
+    "ParticleOptimizerMixin",
+    "InventoryScreenMixin",
+    "FogOptimizerMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}
